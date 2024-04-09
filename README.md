@@ -1,3 +1,26 @@
+# Using the tool
+
+The tool is designed to run on your maching locally, with no server or special libraries needed.
+
+1- Open the `webtool/index.html` file locally in your web browser. This file will load a HTML webpage, and a javascript. 
+
+2- Set your API key which you got from your account page on the MétéoFrance API website (https://portail-api.meteofrance.fr/)
+
+3- Press "set key" and the "Parameters" section will populate with options, select one option and the "Réseau" options will be populated, selecting a Réseau option will populate the options for "Altitude" and "Échéance".
+
+4- Finally click "Download". Note that the download filename is random, with no file-extension, but it will still open in Panoply.
+
+5- If you wish to merge the many output files into one file, you can simply concatenate them into a single file. The simplest solution is to move them into a single folder and run
+
+```
+$ cat ./* > merged-file.grib2
+```
+Tested on Firefox only
+
+NOTE: there is a low limit of 50 requests/minute. Each time you change a Paramètre or Réseau value, set the API key, or download the files, a request is made, couting towards your API requests. If you pass this limit the requests won't work for some time (it seems to take around 10 minutes). You will see an error about CORS, the error is not visible on the website, but will only be visible on the brower's inspection tools.
+
+## Description du projet:
+
 **Sommaire:** Outil pour faciliter le téléchargement des données de l'API Météo-France.
 
 #### 1. Problématique et proposition de valeur
@@ -41,9 +64,13 @@ https://github.com/guylifshitz/meteofrance-easyaccess
 API Météo-France:
 https://portail-api.meteofrance.fr/web/
 
+On a consulté ce tuto sur l'utilisation de l'API:
+https://callendar.medium.com/tuto-acc%C3%A9der-aux-pr%C3%A9visions-de-m%C3%A9t%C3%A9o-france-et-cr%C3%A9er-une-carte-m%C3%A9t%C3%A9o-avec-python-65c98ee552c7
+
 #### 5.Retours sur la qualité des données exploitées
 
 Impossibilité de filtrer les données sur le site meteodata.gouv, nécéssitant l'utilisation de l'API de Météo-France et des compétences de développement pas forcément existantes chez les utilisateurs de données. 
 Les packages de données de modèles de prévisions ne sont pas lisibles par certains utilitaires type panoply ou xygrib.
+
 
 
