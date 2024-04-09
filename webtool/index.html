@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MétéoFrance API téléchargeur</title>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <h1>MétéoFrance API téléchargeur: We're EasyAccess!</h1>
+    <form>
+      <label for="api_key">Clé API:</label>
+      <input type="textarea " id="api_key" size="100" name="api_key" />
+      <input id="load_api_key" type="button" value="set key" /> <br /><br />
+      <!-- <textarea id="load_api_key" rows="20" cols="70"></textarea> -->
+      <!-- <label for="date_start">Date début:</label><br />
+      <input type="text" id="date_start" name="date_start" />
+      <br />
+      <label for="date_end">Date fin:</label><br />
+      <input type="text" id="date_end" name="date_end" />
+      <br /> -->
+      <label for="latitude_1">latitude:</label><br />
+      <input type="text" id="latitude_1" name="latitude_1" />
+      à
+      <input type="text" id="latitude_2" name="latitude_2" />
+      <br />
+      <label for="longitude_1">longitude:</label><br />
+      <input type="text" id="longitude_1" name="longitude_1" />
+      à
+      <input type="text" id="longitude_2" name="longitude_2" />
+      <br />
+      <label for="coverageType">Paramètre:</label>
+      <select id="coverageType" name="coverageType"></select>
+      <br />
+      <label for="coverageId">Réseau:</label>
+      <select id="coverageId" name="coverageId"></select>
+      <br />
+      <label for="height">Altitude:</label>
+      <select id="height" name="height"></select>
+      <br />
+      <label for="time">Échéance:</label>
+      <select id="time" name="time"></select>
+      <br />
+      <br />
+      <input id="download" type="button" value="Download" />
+    </form>
+  </body>
+</html>
