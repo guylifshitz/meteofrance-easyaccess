@@ -1,5 +1,6 @@
 
-# Using the tool
+# meteofrance-easyaccess 
+## Using the tool
 
 The tool is designed to run on your maching locally, with no server or special libraries needed.
 
