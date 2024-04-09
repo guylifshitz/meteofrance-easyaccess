@@ -1,3 +1,4 @@
+
 # Using the tool
 
 The tool is designed to run on your maching locally, with no server or special libraries needed.
@@ -18,6 +19,8 @@ $ cat ./* > merged-file.grib2
 Tested on Firefox only
 
 NOTE: there is a low limit of 50 requests/minute. Each time you change a Paramètre or Réseau value, set the API key, or download the files, a request is made, couting towards your API requests. If you pass this limit the requests won't work for some time (it seems to take around 10 minutes). You will see an error about CORS, the error is not visible on the website, but will only be visible on the brower's inspection tools.
+
+<img width="1266" alt="Capture d’écran 5784-08-01 à 12 02 43" src="https://github.com/guylifshitz/meteofrance-easyaccess/assets/2285693/4c1a8d46-19db-479e-a4bb-b86d03431c00">
 
 ## Description du projet:
 
